@@ -4,11 +4,17 @@ import Work from '../Work/Work';
 import './Works.css'
 const Works = () => {
   const [routines,setRoutine]=useState([]);
+  const [timeList,setTimeList]=useState([]);
   useEffect(()=>{
     fetch('fakedata.json')
     .then(res=>res.json())
     .then(data=>setRoutine(data))
   },[])
+  const addToList=(time)=>{
+    let totaltime=[];
+    totaltime=[...timeList,time];
+    setTimeList(totaltime);
+  }
   // console.log(routines);
   return (
     <div className='full-works'>
@@ -17,15 +23,15 @@ const Works = () => {
       <h2>Daily Works</h2>
       <div className='work-routine'>
       {
-routines.map(routine=><Work routines={routine} key={routine.id}></Work>)
+routines.map(routine=><Work routines={routine} key={routine.id} addToList={addToList}></Work>)
       }
       </div>
      
       </div>
       <div className='work-list'>
-       
+       <h2>{timeList.length}</h2>
         {
-          <List></List>
+          <List timeList={timeList}></List>
         }
       </div>
     </div>

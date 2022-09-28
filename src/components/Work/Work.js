@@ -1,7 +1,7 @@
 import React from 'react';
 import './Work.css'
 const Work = (props) => {
-  // console.log(props.routines);
+  console.log(props);
   const {picture,time,name,about}=props.routines;
   return (
     <div className='work-item'>
@@ -13,7 +13,7 @@ const Work = (props) => {
       
       </div>
      
-      <button className='work-btn'>add to work</button>
+      <button className='work-btn' onClick={()=>props.addToList(props.routines)}>add to work</button>
     </div>
   );
 };

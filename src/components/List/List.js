@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import MyImage from '../../image/my.jpg';
 import './List.css'
-const List = () => {
+const List = (props) => {
+  console.log(props.timeList);
   const [time,setTime]=useState(0);
   const breakTimeButton=(e)=>{
     setTime(e);
   }
+
+ let total=0;
+ for(const getTime of props.timeList){
+total=total+getTime.time;
+ }
+ 
   return (
     <div>
       <div className='list-profile'>
@@ -40,7 +47,7 @@ const List = () => {
       </div>
       <div className='exercise-details'>
       <h2>Exercise Details</h2>
-      <h2>Exercise Time:</h2>
+      <h2>Exercise Time:{total}</h2>
       <h2>Break time:{time}</h2>
       </div>
      
