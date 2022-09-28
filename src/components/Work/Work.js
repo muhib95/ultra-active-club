@@ -1,7 +1,7 @@
 import React from 'react';
 import './Work.css'
 const Work = (props) => {
-  console.log(props);
+  // console.log(props);
   const {picture,time,name,about}=props.routines;
   return (
     <div className='work-item'>

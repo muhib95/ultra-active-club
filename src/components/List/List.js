@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { getLocal, setLocal } from '../../data/fakedata';
 import MyImage from '../../image/my.jpg';
 import './List.css'
 const List = (props) => {
-  console.log(props.timeList);
+  // console.log(props.timeList);
   const [time,setTime]=useState(0);
+  useEffect(()=>{
+    const localValue=getLocal();
+    // console.log(localValue);
+    setTime(localValue);
+  },[]);
   const breakTimeButton=(e)=>{
     setTime(e);
+    setLocal(e);
   }
 
  let total=0;

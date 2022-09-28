@@ -29,7 +29,7 @@ routines.map(routine=><Work routines={routine} key={routine.id} addToList={addTo
      
       </div>
       <div className='work-list'>
-       <h2>{timeList.length}</h2>
+      
         {
           <List timeList={timeList}></List>
         }
