@@ -57,7 +57,7 @@ total=total+getTime.time;
       <h2>Exercise Time:{total}</h2>
       <h2>Break time:{time}</h2>
       </div>
-     
+     <button>Activity Completed</button>
 
     </div>
   );

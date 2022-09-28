@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Nav from '../../Nav/Nav';
 import List from '../List/List';
 import Work from '../Work/Work';
 import './Works.css'
@@ -17,24 +18,27 @@ const Works = () => {
   }
   // console.log(routines);
   return (
-    <div className='full-works'>
+       <div className='full-works'>
        
-      <div >
-      <h2>Daily Works</h2>
-      <div className='work-routine'>
-      {
-routines.map(routine=><Work routines={routine} key={routine.id} addToList={addToList}></Work>)
-      }
-      </div>
-     
-      </div>
-      <div className='work-list'>
+       <div >
+        <Nav></Nav>
+       <h2 className='goal'>Daily Goals</h2>
+       <div className='work-routine'>
+       {
+ routines.map(routine=><Work routines={routine} key={routine.id} addToList={addToList}></Work>)
+       }
+       </div>
       
-        {
-          <List timeList={timeList}></List>
-        }
-      </div>
-    </div>
+       </div>
+       <div className='work-list'>
+       
+         {
+           <List timeList={timeList}></List>
+         }
+       </div>
+     </div>
+    
+   
   );
 };
 

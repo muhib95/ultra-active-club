@@ -11,3 +11,8 @@
 .work-list{
   border: 2px solid black;
 }
+.goal{
+  text-align: left;
+  margin-left: 15px;
+  color: chocolate;
+}
