@@ -1,15 +1,19 @@
 import React from 'react';
-
+import './Work.css'
 const Work = (props) => {
   // console.log(props.routines);
   const {picture,time,name,about}=props.routines;
   return (
-    <div>
+    <div className='work-item'>
+      <div className='work-info'>
       <img src={picture} alt="pic" />
       <h2>{name}</h2>
-      <p>{time}</p>
-      <p>{about}</p>
-      <button>add to work</button>
+      <p>{about.slice(0,100)}</p>
+      <p>Time required : {time}hr</p>
+      
+      </div>
+     
+      <button className='work-btn'>add to work</button>
     </div>
   );
 };

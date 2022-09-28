@@ -1,0 +1,13 @@
+.full-works{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.work-routine{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-left: 10px;
+}
+.work-list{
+  border: 2px solid black;
+}
