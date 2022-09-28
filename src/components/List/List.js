@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MyImage from '../../image/my.jpg';
 import './List.css'
 const List = () => {
+  const [time,setTime]=useState(0);
+  const breakTimeButton=(e)=>{
+    setTime(e);
+  }
   return (
     <div>
       <div className='list-profile'>
@@ -28,16 +32,16 @@ const List = () => {
       </div>
       <h2>Add Break</h2>
       <div className='break-btn'>
-        <button>20m</button>
-        <button>30m</button>
-        <button>40m</button>
-        <button>50m</button>
-        <button>60m</button>
+        <button onClick={()=>breakTimeButton(20)}>20m</button>
+        <button onClick={()=>breakTimeButton(30)}>30m</button>
+        <button onClick={()=>breakTimeButton(40)}>40m</button>
+        <button onClick={()=>breakTimeButton(50)}>50m</button>
+        <button onClick={()=>breakTimeButton(60)}>60m</button>
       </div>
       <div className='exercise-details'>
       <h2>Exercise Details</h2>
       <h2>Exercise Time:</h2>
-      <h2>Break time:</h2>
+      <h2>Break time:{time}</h2>
       </div>
      
 
