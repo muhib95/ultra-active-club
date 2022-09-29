@@ -5,11 +5,12 @@
 .work-routine{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  row-gap: 15px;
   margin-left: 10px;
 }
 .work-list{
-  border: 2px solid black;
+  background-color: white;
+  
 }
 .goal{
   text-align: left;

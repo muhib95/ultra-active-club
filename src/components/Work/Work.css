@@ -1,8 +1,13 @@
 .work-item{
-  width: 300px;
-  height: 460px;
-  border: 2px solid black;
-  position: relative;
+ background-color: white;
+ width: 300px;
+ height: 460px;
+ border-radius: 5px;
+ position: relative;
+ -webkit-border-radius: 5p;
+ -moz-border-radius: 5p;
+ -ms-border-radius: 5p;
+ -o-border-radius: 5p;
 }
 .work-info{
   padding: 5px;
