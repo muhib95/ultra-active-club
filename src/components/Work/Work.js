@@ -12,8 +12,10 @@ const Work = (props) => {
       <p>Time required : {time}hr</p>
       
       </div>
-     
-      <button className='work-btn' onClick={()=>props.addToList(props.routines)}>add to work</button>
+     <div className='btn-div'>
+     <button className='work-btn' onClick={()=>props.addToList(props.routines)}>add to work</button>
+     </div>
+      
     </div>
   );
 };
