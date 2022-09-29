@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getLocal, setLocal } from '../../data/fakedata';
 import MyImage from '../../image/my.jpg';
 import './List.css'
+import Swal from 'sweetalert2';
 const List = (props) => {
   // console.log(props.timeList);
   const [time,setTime]=useState(0);
@@ -13,6 +14,9 @@ const List = (props) => {
   const breakTimeButton=(e)=>{
     setTime(e);
     setLocal(e);
+  }
+  const activity=()=>{
+Swal.fire('Your work completed');
   }
 
  let total=0;
@@ -57,7 +61,7 @@ total=total+getTime.time;
       <h2 className='exercise-time'>Exercise Time: <span>{total} hr</span></h2>
       <h2 className='exercise-time'>Break time: <span>{time} min</span></h2>
       </div>
-     <button className='activity-btn'>Activity Completed</button>
+     <button className='activity-btn' onClick={()=>activity()}>Activity Completed</button>
 
     </div>
   );

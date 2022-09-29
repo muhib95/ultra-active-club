@@ -21,7 +21,10 @@ const Works = () => {
        <div className='full-works'>
        
        <div >
+        <div className='routine-nav'>
         <Nav></Nav>
+        </div>
+        
        <h2 className='goal'>Daily Goals</h2>
        <div className='work-routine'>
        {
@@ -31,6 +34,9 @@ const Works = () => {
       
        </div>
        <div className='work-list'>
+        <div className='list-nav'>
+        <Nav></Nav>
+        </div>
        
          {
            <List timeList={timeList}></List>
