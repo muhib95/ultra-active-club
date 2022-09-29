@@ -17,3 +17,27 @@
   margin-left: 15px;
   color: chocolate;
 }
+@media screen and (max-width: 800px){
+  .full-works{
+    display: flex;
+    
+  }
+  .work-routine{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 50%;
+  }
+  
+}
+@media screen and (max-width: 400px){
+  .full-works{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .work-routine{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+}

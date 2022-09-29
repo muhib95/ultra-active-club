@@ -9,7 +9,7 @@ const Work = (props) => {
       <img src={picture} alt="pic" />
       <h2>{name}</h2>
       <p>{about.slice(0,100)}</p>
-      <p>Time required : {time}hr</p>
+      <h4>Time required : <span>{time}hr</span></h4>
       
       </div>
      <div className='btn-div'>

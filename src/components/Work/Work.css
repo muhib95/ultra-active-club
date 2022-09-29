@@ -4,10 +4,10 @@
  height: 460px;
  border-radius: 5px;
  position: relative;
- -webkit-border-radius: 5p;
- -moz-border-radius: 5p;
- -ms-border-radius: 5p;
- -o-border-radius: 5p;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ -ms-border-radius: 5px;
+ -o-border-radius: 5px;
 }
 .work-info{
   padding: 5px;
