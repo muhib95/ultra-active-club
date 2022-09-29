@@ -21,7 +21,7 @@ total=total+getTime.time;
  }
  
   return (
-    <div>
+    <div className='full-list'>
       <div className='list-profile'>
         <img src={MyImage} alt="" />
         <div className='info'>
@@ -54,10 +54,10 @@ total=total+getTime.time;
       </div>
       <div className='exercise-details'>
       <h2>Exercise Details</h2>
-      <h2>Exercise Time:{total}</h2>
-      <h2>Break time:{time}</h2>
+      <h2 className='exercise-time'>Exercise Time: <span>{total} hr</span></h2>
+      <h2 className='exercise-time'>Break time: <span>{time} min</span></h2>
       </div>
-     <button>Activity Completed</button>
+     <button className='activity-btn'>Activity Completed</button>
 
     </div>
   );
