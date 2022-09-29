@@ -1,0 +1,27 @@
+.answer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 5px;
+}
+.answer-item{
+  border: 1px solid black;
+  padding: 15px;
+}
+
+@media screen and (max-width: 768px){
+  .answer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    margin-left: 10px;
+  }
+  
+}
+@media screen and (max-width: 576px){
+  .answer{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   
+  }
+
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Nav from '../../Nav/Nav';
+import Answer from '../Answer/Answer';
 import List from '../List/List';
 import Work from '../Work/Work';
 import './Works.css'
@@ -18,7 +19,8 @@ const Works = () => {
   }
   // console.log(routines);
   return (
-       <div className='full-works'>
+    <div>
+        <div className='full-works'>
        
        <div >
         <div className='routine-nav'>
@@ -43,6 +45,9 @@ const Works = () => {
          }
        </div>
      </div>
+     <Answer></Answer>
+    </div>
+     
     
    
   );
